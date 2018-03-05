@@ -114,6 +114,9 @@ type NodeDetail struct {
 	// Metrics collected for this resource
 	Metrics []metricapi.Metric `json:"metrics"`
 
+	// Metrics collected for this resource
+	PrometheusMetrics []metricapi.Metric `json:"prometheusMetrics"`
+
 	// Taints
 	Taints []v1.Taint `json:"taints,omitempty"`
 
@@ -165,7 +168,9 @@ func GetNodeDetail(client k8sClient.Interface, metricClient metricapi.MetricClie
 	}
 
 	metrics, _ := metricPromises.GetMetrics()
-	nodeDetails := toNodeDetail(*node, podList, eventList, allocatedResources, metrics, nonCriticalErrors)
+	prometheusMetrics, _ := GetPrometheusMetrics(node)
+
+	nodeDetails := toNodeDetail(*node, podList, eventList, allocatedResources, metrics, prometheusMetrics, nonCriticalErrors)
 	return &nodeDetails, nil
 }
 
@@ -324,7 +329,7 @@ func getNodePods(client k8sClient.Interface, node v1.Node) (*v1.PodList, error) 
 }
 
 func toNodeDetail(node v1.Node, pods *pod.PodList, eventList *common.EventList,
-	allocatedResources NodeAllocatedResources, metrics []metricapi.Metric, nonCriticalErrors []error) NodeDetail {
+	allocatedResources NodeAllocatedResources, metrics []metricapi.Metric, prometheusMetrics []metricapi.Metric, nonCriticalErrors []error) NodeDetail {
 
 	return NodeDetail{
 		ObjectMeta:         api.NewObjectMeta(node.ObjectMeta),
@@ -340,6 +345,7 @@ func toNodeDetail(node v1.Node, pods *pod.PodList, eventList *common.EventList,
 		EventList:          *eventList,
 		AllocatedResources: allocatedResources,
 		Metrics:            metrics,
+		PrometheusMetrics:  prometheusMetrics,
 		Taints:             node.Spec.Taints,
 		Addresses:          node.Status.Addresses,
 		Errors:             nonCriticalErrors,

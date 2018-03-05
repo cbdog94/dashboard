@@ -21,10 +21,26 @@ const i18n = {
   MSG_GRAPH_MEMORY_USAGE_LEGEND_LABEL: goog.getMsg('Memory Usage'),
   /** @export {string} @desc Name of the CPU limit metric as displayed in the legend. */
   MSG_GRAPH_CPU_LIMIT_LEGEND_LABEL: goog.getMsg('CPU Limit'),
+  /** @export {string} @desc Name of the Disk Used metric as displayed in the legend. */
+  MSG_GRAPH_DISK_USED_LEGEND_LABEL: goog.getMsg('Disk Used'),
+  /** @export {string} @desc Name of the Disk Read metric as displayed in the legend. */
+  MSG_GRAPH_DISK_READ_LEGEND_LABEL: goog.getMsg('Disk Read'),
+  /** @export {string} @desc Name of the Disk Write metric as displayed in the legend. */
+  MSG_GRAPH_DISK_WRITE_LEGEND_LABEL: goog.getMsg('Disk Write'),
+  /** @export {string} @desc Name of the Netwoek Send metric as displayed in the legend. */
+  MSG_GRAPH_NETWORK_SEND_LEGEND_LABEL: goog.getMsg('Netwoek Send'),
+  /** @export {string} @desc Name of the Netwoek Send metric as displayed in the legend. */
+  MSG_GRAPH_NETWORK_RECEIVE_LEGEND_LABEL: goog.getMsg('Netwoek Receive'),
   /** @export {string} @desc Name of Y axis showing CPU usage. */
   MSG_GRAPH_CPU_AXIS_LABEL: goog.getMsg('CPU (cores)'),
   /** @export {string} @desc Name of Y axis showing memory usage. */
   MSG_GRAPH_MEMORY_AXIS_LABEL: goog.getMsg('Memory (bytes)'),
+  /** @export {string} @desc Name of Y axis showing Disk. */
+  MSG_GRAPH_DISK_USED_AXIS_LABEL: goog.getMsg('Disk Used'),
+  /** @export {string} @desc Name of Y axis showing Disk. */
+  MSG_GRAPH_DISK_RATE_AXIS_LABEL: goog.getMsg('Disk Rate (bytes/s)'),
+  /** @export {string} @desc Name of Y axis showing Network. */
+  MSG_GRAPH_NETWORK_AXIS_LABEL: goog.getMsg('Network Rate (bytes/s)'),
   /** @export {string} @desc Name of time axis. */
   MSG_GRAPH_TIME_AXIS_LABEL: goog.getMsg('Time'),
 };
@@ -49,6 +65,9 @@ export const MAX_BETWEEN_TICKS = [3.8, 4.1];
 export const CPUAxisType = 'CPUAxisType';
 export const MemoryAxisType = 'MemoryAxisType';
 export const TimeAxisType = 'TimeAxisType';
+export const NetworkAxisType = 'NetworkAxisType';
+export const DiskUsedAxisType = 'DiskUsedAxisType';
+export const DiskRateAxisType = 'DiskRateAxisType';
 
 /**
  * Settings used by GraphController to display different metrics.
@@ -86,6 +105,56 @@ export const metricDisplaySettings = {
     type: 'line',
     yAxis: 2,
   },
+  'disk/used': {
+    yAxisType: DiskUsedAxisType,
+    area: true,
+    key: i18n.MSG_GRAPH_DISK_USED_LEGEND_LABEL,
+    color: '#ffb74d',  // $chart-2
+    fillOpacity: 0.2,
+    strokeWidth: 3,
+    type: 'line',
+    yAxis: 2,
+  },
+  'disk/read': {
+    yAxisType: DiskRateAxisType,
+    area: true,
+    key: i18n.MSG_GRAPH_DISK_READ_LEGEND_LABEL,
+    color: '#ffb74d',  // $chart-2
+    fillOpacity: 0.2,
+    strokeWidth: 3,
+    type: 'line',
+    yAxis: 2,
+  },
+  'disk/write': {
+    yAxisType: DiskRateAxisType,
+    area: true,
+    key: i18n.MSG_GRAPH_DISK_WRITE_LEGEND_LABEL,
+    color: '#ffb74d',  // $chart-2
+    fillOpacity: 0.2,
+    strokeWidth: 3,
+    type: 'line',
+    yAxis: 2,
+  },
+  'network/send': {
+    yAxisType: NetworkAxisType,
+    area: true,
+    key: i18n.MSG_GRAPH_NETWORK_SEND_LEGEND_LABEL,
+    color: '#f36c60',  // $chart-2
+    fillOpacity: 0.2,
+    strokeWidth: 3,
+    type: 'line',
+    yAxis: 2,
+  },
+  'network/receive': {
+    yAxisType: NetworkAxisType,
+    area: true,
+    key: i18n.MSG_GRAPH_NETWORK_RECEIVE_LEGEND_LABEL,
+    color: '#f36c60',  // $chart-2
+    fillOpacity: 0.2,
+    strokeWidth: 3,
+    type: 'line',
+    yAxis: 2,
+  },
 };
 
 /**
@@ -105,5 +174,19 @@ export const axisSettings = {
   'TimeAxisType': {
     formatter: formatTime,
     label: i18n.MSG_GRAPH_TIME_AXIS_LABEL,
+  },
+  'DiskUsedAxisType': {
+    formatter: function (d) {
+      return d+'%';
+    },
+    label: i18n.MSG_GRAPH_DISK_USED_AXIS_LABEL,
+  },
+  'DiskRateAxisType': {
+    formatter: formatMemoryUsage,
+    label: i18n.MSG_GRAPH_DISK_RATE_AXIS_LABEL,
+  },
+  'NetworkAxisType': {
+    formatter: formatMemoryUsage,
+    label: i18n.MSG_GRAPH_NETWORK_AXIS_LABEL,
   },
 };

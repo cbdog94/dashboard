@@ -27,6 +27,30 @@ limitations under the License.
                  selected-metric-names="'memory/usage'">
   </kd-graph-card>
 </div>
+<div layout="row">
+  <kd-graph-card graph-title="[[Disk Used|Title for graph card displaying disk metric of nodes.]]"
+                metrics="::ctrl.nodeDetail.prometheusMetrics"
+                selected-metric-names="'disk/used'">
+  </kd-graph-card>
+  <kd-graph-card graph-title="[[Disk Read|Title for graph card displaying disk metric of nodes.]]"
+                metrics="::ctrl.nodeDetail.prometheusMetrics"
+                selected-metric-names="'disk/read'">
+  </kd-graph-card>
+  <kd-graph-card graph-title="[[Disk Write|Title for graph card displaying disk metric of nodes.]]"
+                metrics="::ctrl.nodeDetail.prometheusMetrics"
+                selected-metric-names="'disk/write'">
+  </kd-graph-card>
+</div>
+<div layout="row">
+  <kd-graph-card graph-title="[[Network Send|Title for graph card displaying network metric of nodes.]]"
+                metrics="::ctrl.nodeDetail.prometheusMetrics"
+                selected-metric-names="'network/send'">
+  </kd-graph-card>
+  <kd-graph-card graph-title="[[Network Receive|Title for graph card displaying network metric of nodes.]]"
+                metrics="::ctrl.nodeDetail.prometheusMetrics"
+                selected-metric-names="'network/receive'">
+  </kd-graph-card>
+</div>
 
 <kd-node-info node="::ctrl.nodeDetail"></kd-node-info>
 
