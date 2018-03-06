@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE translationbundle><translationbundle lang="zh">
-  <translation id="961242340990264399" key="MSG_ABOUT_ABOUT_0" desc="This is a label for button displayed on about page used to open documentaion in browser">文档</translation>
+  <translation id="3846688850575044887" key="MSG_ABOUT_ABOUT_0" desc="Global settings header.">About</translation>
   <translation id="5634646746226609179" key="MSG_ABOUT_ABOUT_1" desc="Label \'Dashboard Version\' for the about page.">仪表板版本</translation>
   <translation id="4718120324314749596" key="MSG_ABOUT_ABOUT_2" desc="Label \'Git Commit\' for the about page.">Git 提交</translation>
-  <translation id="5788105450172886273" key="MSG_ABOUT_ABOUT_3" desc="This is a label for button displayed on about page used to send feedback to GitHub new issue.">发送反馈</translation>
+  <translation id="1212688278537853620" key="MSG_ABOUT_ABOUT_3" desc="Project description on about page.">General-purpose web UI for Kubernetes clusters</translation>
   <translation id="4249662097435421699" key="MSG_ABOUT_ABOUT_4" desc="This is the copyright statement displayed on the about page">版权所有 2015-{{ $ctrl.latestCopyrightYear}} Kubernetes 团队</translation>
-  <translation id="4171916442768740608" key="MSG_ABOUT_ABOUT_5" desc="This is the creator reference on the footer of the about page"> Kubernetes 仪表板由&lt;a href="https://github.com/kubernetes/dashboard/graphs/contributors"&gt;社区&lt;/a&gt;作为&lt;a href="https://github.com/kubernetes/dashboard"&gt;开源项目&lt;/a&gt;打造</translation>
-  <translation id="4426231252111230009" key="MSG_ABOUT_ABOUT_6" desc="Dashbord moto on the about page, just below the header">Kubernetes 集群通用网页界面</translation>
+  <translation id="908641021194885494" key="MSG_ABOUT_ABOUT_5" desc="Creator reference on the footer of the about page.">Kubernetes Dashboard is made possible by the Dashboard &lt;a href="https://github.com/kubernetes/dashboard/graphs/contributors"&gt;community&lt;/a&gt; as an &lt;a href="https://github.com/kubernetes/dashboard"&gt;open source project&lt;/a&gt;.</translation>
+  <translation id="2365002697773543715" key="MSG_ABOUT_ACTIONBAR_0" desc="Tooltip of button linking to documentation.">Read Kubernetes Dashboard documentation</translation>
+  <translation id="6381847044207707182" key="MSG_ABOUT_ACTIONBAR_1" desc="Label of button linking to documentation.">Documentation</translation>
+  <translation id="2035796754621111890" key="MSG_ABOUT_ACTIONBAR_2" desc="Tooltip of button linking to new issue on GitHub used to send feedback.">Create new issue on GitHub</translation>
+  <translation id="5625550638633956281" key="MSG_ABOUT_ACTIONBAR_3" desc="Label of button linking to new issue on GitHub used to send feedback.">Send feedback</translation>
   <translation id="6783150167357318030" key="MSG_ACTION_BAR_DELETE_TOOLTIP" desc="Generic &quot;Delete some resource&quot; tooltip text which appears over the delete icon on the global action bar.">删除 <ph name="RESOURCE_NAME"/></translation>
   <translation id="1421031463694814701" key="MSG_ACTION_BAR_EDIT_TOOLTIP" desc="Generic &quot;Edit some resource&quot; tooltip text which appears over the edit icon on the global action bar.">编辑 <ph name="RESOURCE_NAME"/></translation>
   <translation id="1024358167652076581" key="MSG_ALL_NAMESPACES" desc="Text for dropdown item that indicates that no namespace was selected">所有命名空间</translation>
@@ -380,7 +383,7 @@
   <translation id="4656960526536446359" key="MSG_DEPLOY_DEPLOYFROMSETTINGS_DEPLOYLABEL_DEPLOYLABEL_2" desc="This warning appears when the key name of a specified kubernetes label (on the deploy page) does not match the required pattern.">标签键名称必须是以'-'、'_'或者'.'分割的英文字母组成。可选的，名称可以添加 DNS 子域名 + '/' 前缀。</translation>
   <translation id="868107490307868628" key="MSG_DEPLOY_DEPLOYFROMSETTINGS_DEPLOYLABEL_DEPLOYLABEL_3" desc="This warning appears when the key prefix of a specified kubernetes label (on the deploy page) is too long.">前缀不能超过253个字符。</translation>
   <translation id="8219339592121454206" key="MSG_DEPLOY_DEPLOYFROMSETTINGS_DEPLOYLABEL_DEPLOYLABEL_4" desc="This warning appears when the value of a specified kubernetes label (on the deploy page) does not match the required pattern.">标签键名称不能超过63个字符。</translation>
-  <translation id="6184873524982090439" key="MSG_DEPLOY_DEPLOYFROMSETTINGS_DEPLOYLABEL_DEPLOYLABEL_5" desc="This warning appears when the value of a specified kubernetes label (on the deploy page) does not match the required pattern.">>标签值必须是以'-'、'_'或者'.'分割的英文字母组成。</translation>
+  <translation id="6184873524982090439" key="MSG_DEPLOY_DEPLOYFROMSETTINGS_DEPLOYLABEL_DEPLOYLABEL_5" desc="This warning appears when the value of a specified kubernetes label (on the deploy page) does not match the required pattern.">&gt;标签值必须是以'-'、'_'或者'.'分割的英文字母组成。</translation>
   <translation id="2714838877898173869" key="MSG_DEPLOY_DEPLOYFROMSETTINGS_DEPLOYLABEL_DEPLOYLABEL_6" desc="This warning appears when the value of a specified kubernetes label (on the deploy page) is too long.">标签值不能超过253个字符。</translation>
   <translation id="4021721764621979422" key="MSG_DEPLOY_DEPLOYFROMSETTINGS_ENVIRONMENTVARIABLES_ENVIRONMENTVARIABLES_0" desc="Title of the Environment Variables section on the deploy page.">环境变量</translation>
   <translation id="263038526347988238" key="MSG_DEPLOY_DEPLOYFROMSETTINGS_ENVIRONMENTVARIABLES_ENVIRONMENTVARIABLES_1" desc="Label &quot;Name&quot; which appears as a placeholder for the input of an environment variable name on the deploy page.">名称</translation>
@@ -434,8 +437,16 @@
   <translation id="4576303150557908117" key="MSG_GRAPH_CPU_LIMIT_LEGEND_LABEL" desc="Name of the CPU limit metric as displayed in the legend.">CPU 限制值</translation>
   <translation id="6172878964647554384" key="MSG_GRAPH_CPU_USAGE_LEGEND_LABEL" desc="Name of the CPU usage metric as displayed in the legend.">CPU 使用率</translation>
   <translation id="1378300715036317101" key="MSG_GRAPH_DATA_POINT_NOT_AVAILABLE" desc="String to display when data point is not available.">不可用</translation>
+  <translation id="2514337262584187632" key="MSG_GRAPH_DISK_RATE_AXIS_LABEL" desc="Name of Y axis showing disk rate.">磁盘速率 (字节/秒)</translation>
+  <translation id="2660401014079567645" key="MSG_GRAPH_DISK_READ_LEGEND_LABEL" desc="Name of the disk read metric as displayed in the legend.">磁盘读取速率</translation>
+  <translation id="5543506361689939111" key="MSG_GRAPH_DISK_USED_AXIS_LABEL" desc="Name of Y axis showing disk used.">磁盘使用</translation>
+  <translation id="2725584067019575377" key="MSG_GRAPH_DISK_USED_LEGEND_LABEL" desc="Name of the disk used metric as displayed in the legend.">磁盘使用率</translation>
+  <translation id="7903852370917363056" key="MSG_GRAPH_DISK_WRITE_LEGEND_LABEL" desc="Name of the disk write metric as displayed in the legend.">磁盘写入速率</translation>
   <translation id="2029236165141474072" key="MSG_GRAPH_MEMORY_AXIS_LABEL" desc="Name of Y axis showing memory usage.">内存（字节）</translation>
   <translation id="6525531670828842343" key="MSG_GRAPH_MEMORY_USAGE_LEGEND_LABEL" desc="Name of the memory usage metric as displayed in the legend.">内存占用</translation>
+  <translation id="2369845681301057579" key="MSG_GRAPH_NETWORK_AXIS_LABEL" desc="Name of Y axis showing network.">网络速率 (字节/秒)</translation>
+  <translation id="533802303730443048" key="MSG_GRAPH_NETWORK_RECEIVE_LEGEND_LABEL" desc="Name of the network receive metric as displayed in the legend.">网络接收速率</translation>
+  <translation id="7382323835124160604" key="MSG_GRAPH_NETWORK_SEND_LEGEND_LABEL" desc="Name of the network send metric as displayed in the legend.">网络发送速率</translation>
   <translation id="185015236199417198" key="MSG_GRAPH_TIME_AXIS_LABEL" desc="Name of time axis.">时间</translation>
   <translation id="3116131023784654870" key="MSG_HORIZONTALPODAUTOSCALER_DETAIL_ACTIONBAR_0" desc="Label \'Horizontal Pod Autoscaler\' which appears at the top of the delete dialog, opened from a horizontal pod autoscaler details page.">容器组水平伸缩器</translation>
   <translation id="4234217286162701029" key="MSG_HORIZONTALPODAUTOSCALER_DETAIL_INFO_0" desc="Horizontal pod autoscaler info details section name.">详情</translation>
@@ -566,7 +577,12 @@
   <translation id="8825218677764515340" key="MSG_NODE_DETAIL_DETAIL_0" desc="Title for graph card displaying CPU metric of one node.">CPU 使用率</translation>
   <translation id="1397958944434227282" key="MSG_NODE_DETAIL_DETAIL_1" desc="Title for graph card displaying memory metric of one node.">内存使用率</translation>
   <translation id="1964687474867368783" key="MSG_NODE_DETAIL_DETAIL_2" desc="Help message detailing what is included in the memory usage">内存占用包括缓存</translation>
+  <translation id="8818608916611067906" key="MSG_NODE_DETAIL_DETAIL_3" desc="Title for graph card displaying disk metric of nodes.">磁盘使用率</translation>
   <translation id="7278964988916967478" key="MSG_NODE_DETAIL_DETAIL_4" desc="Text for pods card zerostate in node details page.">当前没有容器组被调度到此节点</translation>
+  <translation id="3174268393406393793" key="MSG_NODE_DETAIL_DETAIL_5" desc="Title for graph card displaying disk metric of nodes.">磁盘读取速率</translation>
+  <translation id="361420727714356894" key="MSG_NODE_DETAIL_DETAIL_6" desc="Title for graph card displaying disk metric of nodes.">磁盘写入速率</translation>
+  <translation id="2329389115223948949" key="MSG_NODE_DETAIL_DETAIL_7" desc="Title for graph card displaying network metric of nodes.">网络发送速率</translation>
+  <translation id="4220014404234283588" key="MSG_NODE_DETAIL_DETAIL_8" desc="Title for graph card displaying network metric of nodes.">网络接收速率</translation>
   <translation id="2128002365715974283" key="MSG_NODE_DETAIL_INFO_0" desc="Header in a detail view">详情</translation>
   <translation id="1545993044656301071" key="MSG_NODE_DETAIL_INFO_1" desc="Label \'Phase\' for the node namespace on the node details page.">阶段</translation>
   <translation id="7199224922769170090" key="MSG_NODE_DETAIL_INFO_10" desc="Label \'Kernel Version\' for the node kernel version displayed on its details page.">内核版本</translation>

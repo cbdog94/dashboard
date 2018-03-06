@@ -21,25 +21,25 @@ const i18n = {
   MSG_GRAPH_MEMORY_USAGE_LEGEND_LABEL: goog.getMsg('Memory Usage'),
   /** @export {string} @desc Name of the CPU limit metric as displayed in the legend. */
   MSG_GRAPH_CPU_LIMIT_LEGEND_LABEL: goog.getMsg('CPU Limit'),
-  /** @export {string} @desc Name of the Disk Used metric as displayed in the legend. */
+  /** @export {string} @desc Name of the disk used metric as displayed in the legend. */
   MSG_GRAPH_DISK_USED_LEGEND_LABEL: goog.getMsg('Disk Used'),
-  /** @export {string} @desc Name of the Disk Read metric as displayed in the legend. */
+  /** @export {string} @desc Name of the disk read metric as displayed in the legend. */
   MSG_GRAPH_DISK_READ_LEGEND_LABEL: goog.getMsg('Disk Read'),
-  /** @export {string} @desc Name of the Disk Write metric as displayed in the legend. */
+  /** @export {string} @desc Name of the disk write metric as displayed in the legend. */
   MSG_GRAPH_DISK_WRITE_LEGEND_LABEL: goog.getMsg('Disk Write'),
-  /** @export {string} @desc Name of the Netwoek Send metric as displayed in the legend. */
-  MSG_GRAPH_NETWORK_SEND_LEGEND_LABEL: goog.getMsg('Netwoek Send'),
-  /** @export {string} @desc Name of the Netwoek Send metric as displayed in the legend. */
-  MSG_GRAPH_NETWORK_RECEIVE_LEGEND_LABEL: goog.getMsg('Netwoek Receive'),
+  /** @export {string} @desc Name of the network send metric as displayed in the legend. */
+  MSG_GRAPH_NETWORK_SEND_LEGEND_LABEL: goog.getMsg('Network Send'),
+  /** @export {string} @desc Name of the network receive metric as displayed in the legend. */
+  MSG_GRAPH_NETWORK_RECEIVE_LEGEND_LABEL: goog.getMsg('Network Receive'),
   /** @export {string} @desc Name of Y axis showing CPU usage. */
   MSG_GRAPH_CPU_AXIS_LABEL: goog.getMsg('CPU (cores)'),
   /** @export {string} @desc Name of Y axis showing memory usage. */
   MSG_GRAPH_MEMORY_AXIS_LABEL: goog.getMsg('Memory (bytes)'),
-  /** @export {string} @desc Name of Y axis showing Disk. */
+  /** @export {string} @desc Name of Y axis showing disk used. */
   MSG_GRAPH_DISK_USED_AXIS_LABEL: goog.getMsg('Disk Used'),
-  /** @export {string} @desc Name of Y axis showing Disk. */
+  /** @export {string} @desc Name of Y axis showing disk rate. */
   MSG_GRAPH_DISK_RATE_AXIS_LABEL: goog.getMsg('Disk Rate (bytes/s)'),
-  /** @export {string} @desc Name of Y axis showing Network. */
+  /** @export {string} @desc Name of Y axis showing network. */
   MSG_GRAPH_NETWORK_AXIS_LABEL: goog.getMsg('Network Rate (bytes/s)'),
   /** @export {string} @desc Name of time axis. */
   MSG_GRAPH_TIME_AXIS_LABEL: goog.getMsg('Time'),
