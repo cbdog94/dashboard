@@ -4,6 +4,8 @@ import (
 	"context"
 	"errors"
 	"log"
+	"net"
+	"net/http"
 	"time"
 
 	metricapi "github.com/kubernetes/dashboard/src/app/backend/integration/metric/api"
@@ -36,8 +38,15 @@ func GetPrometheusMetrics(node *v1.Node) ([]metricapi.Metric, error) {
 	prometheusMetricNames := [...]string{"disk/used", "disk/read", "disk/write", "network/send", "network/receive"}
 
 	config := pApi.Config{
-		Address:      "http://" + nodeIP + ":30900",
-		RoundTripper: pApi.DefaultRoundTripper,
+		Address: "http://" + nodeIP + ":30900",
+		RoundTripper: &http.Transport{
+			Proxy: http.ProxyFromEnvironment,
+			Dial: (&net.Dialer{
+				Timeout:   2 * time.Second,
+				KeepAlive: 30 * time.Second,
+			}).Dial,
+			TLSHandshakeTimeout: 2 * time.Second,
+		},
 	}
 
 	pClient, err := pApi.NewClient(config)
