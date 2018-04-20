@@ -33,8 +33,8 @@ func GetPrometheusMetrics(node *v1.Node) ([]metricapi.Metric, error) {
 	prometheusQueryList := [...]string{"100 - 100*sum(node_filesystem_free{device!=\"rootfs\",instance=\"" + nodeIP + ":9100\"}) / sum(node_filesystem_size{device!=\"rootfs\",instance=\"" + nodeIP + ":9100\"})",
 		"sum by (instance) (rate(node_disk_bytes_read{instance=\"" + nodeIP + ":9100\"}[2m]))",
 		"sum by (instance) (rate(node_disk_bytes_written{instance=\"" + nodeIP + ":9100\"}[2m]))",
-		"sum by (instance) (rate(node_network_transmit_bytes{instance=\"" + nodeIP + ":9100\",device!~\"lo\"}[5m]))",
-		"sum by (instance) (rate(node_network_receive_bytes{instance=\"" + nodeIP + ":9100\",device!~\"lo\"}[5m]))"}
+		"sum by (instance) (rate(node_network_transmit_bytes{instance=\"" + nodeIP + ":9100\",device!~\"lo\"}[2m]))",
+		"sum by (instance) (rate(node_network_receive_bytes{instance=\"" + nodeIP + ":9100\",device!~\"lo\"}[2m]))"}
 	prometheusMetricNames := [...]string{"disk/used", "disk/read", "disk/write", "network/send", "network/receive"}
 
 	config := pApi.Config{
